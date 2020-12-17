@@ -2,16 +2,13 @@ package runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import util.AppiumDriverManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import util.AppiumDriverManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        // Run the scenarios specified by tags
-        //tags = {""},
-
         // Define the features files location
         features = {"src/test/resources/features"},
 
@@ -26,7 +23,7 @@ import org.junit.runner.RunWith;
 
         // Plugins
         plugin = {"pretty", "html:target/cucumber-html-report"}
-        )
+)
 class CucumberTestRunner {
 
         @BeforeClass
