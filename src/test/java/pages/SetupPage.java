@@ -22,23 +22,17 @@ public class SetupPage {
         wait = AppiumDriverManager.getWait();
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Próximo\")")
-    public MobileElement nextButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Entendi\")")
-    public MobileElement understandButton;
-
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.Button\")")
-    public MobileElement readAndAcceptButton;
+    public MobileElement nextButton;
 
     public void completeSetup() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
         nextButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
-        understandButton.click();
+        nextButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
         scrollToEnd();
-        readAndAcceptButton.click();
+        nextButton.click();
     }
 
     public void scrollToEnd(){

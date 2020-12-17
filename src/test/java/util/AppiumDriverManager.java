@@ -26,7 +26,7 @@ public class AppiumDriverManager {
         if (driver == null) {
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
             desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 2 API 28");
             desiredCapabilities.setCapability(MobileCapabilityType.VERSION, "9.0");
             desiredCapabilities.setCapability(MobileCapabilityType.APP, APK_PATH);
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");

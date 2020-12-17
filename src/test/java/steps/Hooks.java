@@ -11,8 +11,8 @@ public class Hooks {
         AppiumDriverManager.getDriver();
     }
 
-    @After
-    public static void tearDown() {
-        AppiumDriverManager.closeDriver();
-    }
+//    @After(order = 0)
+//    public static void tearDown() {
+//        AppiumDriverManager.closeDriver();
+//    }
 }
