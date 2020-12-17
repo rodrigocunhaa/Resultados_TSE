@@ -11,8 +11,8 @@ Feature: Favorite a candidate
     And I select the first city
     Then I see "JOSIEL" candidate
 
-  Scenario: I add a candidate to favorites
+  Scenario: Add a candidate to favorites
     Given I select "JOSIEL" candidate
     When I favorite the candidate
     And I go to favorites page
-    Then "Josiel" is displayed on favorites page
+    Then I see "Josiel" displayed on favorites page

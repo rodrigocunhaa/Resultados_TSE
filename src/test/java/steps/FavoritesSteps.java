@@ -8,7 +8,7 @@ public class FavoritesSteps {
 
     private FavoritesPage favoritesPage = new FavoritesPage(AppiumDriverManager.getDriver());
 
-    @Then("{string} is displayed on favorites page")
+    @Then("I see {string} displayed on favorites page")
     public void viewCandidateFavored(String option) {
         assert favoritesPage.returnCandidate(option).isDisplayed();
     }
