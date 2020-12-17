@@ -8,7 +8,7 @@ Feature: Favorite a candidate
   Scenario: Search candidate from a location
     Given I launch the screen to select a local
     When I select the "Amapá" state
-    And I select the "Macapá" city
+    And I select the first city
     Then I see "JOSIEL" candidate
 
   Scenario: I add a candidate to favorites

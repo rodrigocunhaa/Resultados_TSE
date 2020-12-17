@@ -19,15 +19,15 @@ public class CandidatePage {
         wait = AppiumDriverManager.getWait();
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Favoritar\")")
-    public MobileElement favorButton;
-
     @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Fechar\")")
     public MobileElement closeButton;
 
     public void clickFavorButton() {
-//        favorButton.click();
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[5]/android.view.View[2]/android.widget.Button").click();
+        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout" +
+                "/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout" +
+                "/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View" +
+                "/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[2]" +
+                "/android.view.View[2]/android.view.View[5]/android.view.View[2]/android.widget.Button").click();
     }
 
     public void closePage() {

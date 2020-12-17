@@ -39,14 +39,17 @@ public class SelectLocalPage {
         confirmButton.click();
     }
 
-    public void clickCity (String cityOption) {
-//        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + cityOption + "\")")).click();
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.ListView/android.view.View[2]/android.view.View/android.view.View[1]").click();
+    public void clickFirstCity () {
+        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout" +
+                "/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView" +
+                "/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.app.Dialog" +
+                "/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.ListView/android.view.View[2]" +
+                "/android.view.View/android.view.View[1]").click();
     }
 
-    public void selectCity (String cityOption) {
+    public void selectCity () {
         citySelector.click();
-        this.clickCity(cityOption);
+        this.clickFirstCity();
 
         for (int i = 0;i < 2;i++) {
             confirmButton.click();

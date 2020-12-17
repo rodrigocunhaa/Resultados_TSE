@@ -14,8 +14,8 @@ public class SelectLocalSteps {
         selectLocalPage.selectState(option);
     }
 
-    @And("I select the {string} city")
-    public void selectCity(String option) {
-        selectLocalPage.selectCity(option);
+    @And("I select the first city")
+    public void selectFirstCity() {
+        selectLocalPage.selectCity();
     }
 }
