@@ -14,8 +14,13 @@ public class SelectLocalSteps {
         selectLocalPage.selectState(option);
     }
 
-    @And("I select the first city")
-    public void selectFirstCity() {
-        selectLocalPage.selectCity();
+    @And("I select the {string} city")
+    public void selectCity(String option) {
+        selectLocalPage.selectCity(option);
+    }
+
+    @And("I click to confirm")
+    public void clickConfirm() {
+        selectLocalPage.clickConfirmButton();
     }
 }

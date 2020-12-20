@@ -5,7 +5,9 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.AppiumDriverManager;
 
@@ -35,24 +37,24 @@ public class SelectLocalPage {
 
     public void selectState (String stateOption) {
         stateSelector.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
         this.clickState(stateOption);
         confirmButton.click();
     }
 
-    public void clickFirstCity () {
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout" +
-                "/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView" +
-                "/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.app.Dialog" +
-                "/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.ListView/android.view.View[2]" +
-                "/android.view.View/android.view.View[1]").click();
+    public void clickCity (String cityOption) {
+        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + cityOption + "\")")).click();
     }
 
-    public void selectCity () {
+    public void selectCity (String cityOption) {
         citySelector.click();
-        this.clickFirstCity();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
+        this.clickCity(cityOption);
+        confirmButton.click();
+    }
 
-        for (int i = 0;i < 2;i++) {
-            confirmButton.click();
-        }
+    public void clickConfirmButton () {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
+        confirmButton.click();
     }
 }

@@ -32,6 +32,7 @@ public class SetupPage {
         nextButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
         scrollToEnd();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.widget.Button")));
         nextButton.click();
     }
 
