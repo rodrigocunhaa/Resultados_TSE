@@ -7,6 +7,7 @@ This project aims to automate the favorite flow for Resultados apk. This applica
 - Java 1.8 <br>
 - Appium <br>
 - Android Emulator <br>
+___________
 
 ### **Project Structure**
 
@@ -46,8 +47,7 @@ Resultados_TSE/
 - apk >> Apk to be tested. <br>
 - features >> .feature file written in gherkin
 <br>
-___
-
+___________
 
 ### **How to run the project**
 
