@@ -44,8 +44,7 @@ Resultados_TSE/
 - steps >> Test implementation in gherkin for each page. <br>
 - util >> Utility for the project. <br>
 - apk >> Apk to be tested. <br>
-- features >> .feature file written in gherkin
-<br>
+- features >> .feature file written in gherkin. <br>
 
 ### **How to run the project**
 
