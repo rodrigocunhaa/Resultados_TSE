@@ -7,7 +7,6 @@ This project aims to automate the favorite flow for Resultados apk. This applica
 - Java 1.8 <br>
 - Appium <br>
 - Android Emulator <br>
-___________
 
 ### **Project Structure**
 
