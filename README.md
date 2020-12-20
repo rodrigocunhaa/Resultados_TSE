@@ -46,7 +46,6 @@ Resultados_TSE/
 - apk >> Apk to be tested. <br>
 - features >> .feature file written in gherkin
 <br>
-___________
 
 ### **How to run the project**
 
