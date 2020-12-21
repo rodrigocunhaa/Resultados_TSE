@@ -52,3 +52,7 @@ Resultados_TSE/
 - Launch the Appium Server;
 - Edit `AppiumDriverManager.java` with the correct path of the apk on your machine (`APK_PATH`) and also the information related to your Android Emulator (`PLATFORM_NAME`, `DEVICE_NAME`, and `VERSION`);
 - Right click on `CucumberTestRunner.java` > select the option `Run 'CucumberTestRunner'`.
+
+### **Execution Record**
+
+- You can check the tests running on the `Execution_Record.mp4` file.
